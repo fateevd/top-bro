@@ -4,6 +4,6 @@
 ## [Посмотреть сайт](https://fateevd.github.io/top-bro/index.html)
 - [build версия](./built)
 
-- [devob версия](./app)
+- [devob версия]:(./app)
 
 
