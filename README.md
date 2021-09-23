@@ -2,7 +2,7 @@
 
 
 ## [Посмотреть сайт](https://fateevd.github.io/top-bro/index.html)
-- [build версия](./built)
+- [build версия](./build)
 
 - [devob версия](./app)
 
