@@ -1,0 +1,28 @@
+@import "vars";
+@import "mixins";
+@import "default";
+@import "fonts";
+@import "main";
+@import url('https://unpkg.com/swiper/swiper-bundle.min.css');
+
+@include font-face("Montserrat", "Montserrat-Bold", 700);
+@include font-face("Montserrat", "Montserrat-ExtraBold", 400);
+@include font-face("Montserrat", "Montserrat-Light", 300);
+@include font-face("Montserrat", "Montserrat-Medium", 500);
+@include font-face("Montserrat", "Montserrat-SemiBold", 600);
+@include font-face("Roboto", "Roboto-Regular", 400);
+//swiper
+
+@import "components/swiper";
+
+@import "components/header";
+@import "components/current-page";
+@import "components/blogger";
+@import "components/loading";
+@import "components/footer";
+
+//current blogger
+@import "components/current-blogger/about-info";
+@import "components/current-blogger/last-video";
+@import "components/current-blogger/another-blogger";
+

@@ -1,0 +1,103 @@
+.about {
+  margin-top: 51px;
+  display: flex;
+
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid #EFF3F5;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  margin-bottom: 30px;
+@include tablet {
+  flex-direction: column;
+}
+  &-img {
+    margin-right: 40px;
+    @include tablet-big {
+      margin-right: 15px;
+    }
+    @include tablet {
+      margin: 0 auto;
+      max-width: 200px;
+    }
+  }
+
+  &-text {
+    flex: 1 1 70%;
+    margin-right: 40px;
+    @include tablet-big {
+      margin-right: 15px;
+    }
+    @include tablet {
+      margin-right: 0;
+    }
+
+    &__title {
+      padding: 30px 0;
+      border-bottom: 2px solid $colorWhite;
+      text-align: left;
+      @include tablet {
+        text-align: center;
+        padding: 15px 0;
+      }
+    }
+  }
+
+  &-media {
+    border-bottom: 2px solid $colorWhite;
+  }
+
+  &__link {
+    flex: 0 0 40%;
+    margin-top: 30px;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+
+    &-youtube {
+      margin-right: 20px;
+
+      &::before {
+        content: url("../img/about-youtube.svg");
+      }
+    }
+
+    &-vk {
+      margin-right: 20px;
+
+      &::before {
+        content: url("../img/about-vk.svg");
+      }
+    }
+
+    &-instagram {
+      margin-right: 20px;
+
+      &::before {
+        content: url("../img/about-inst.svg");
+      }
+    }
+  }
+
+  &-channel {
+    max-height: 200px;
+    overflow: auto;
+    padding-bottom: 30px;
+    margin-top: 30px;
+
+    &__title {
+      margin-bottom: 10px;
+      font-weight: $fontWBold;
+      font-size: 30px;
+    }
+  }
+
+  .media-soc {
+    @include tablet {
+      display: block;
+    }
+
+  }
+}
+

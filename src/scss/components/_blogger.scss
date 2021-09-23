@@ -1,0 +1,209 @@
+.blogger {
+  margin-top: 33px;
+
+  &-item {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+    @include desktop{
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+    @include desktop-small {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 30px;
+    }
+    @include tablet-small {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 15px;
+    }
+    &__list {
+      width: 311px;
+      height: 311px;
+      object-fit: cover;
+      background-repeat: no-repeat;
+      cursor: pointer;
+
+      &-one {
+        background: url("../img/blogger.svg");
+      }
+
+      &-two {
+        background: url("../img/blogger-two.svg");
+
+      }
+
+      &-three {
+        background: url("../img/blogger-three.svg");
+
+      }
+
+      &-four {
+        background: url("../img/blogger-four.svg");
+      }
+
+      &-five {
+        background: url("../img/blogger-five.svg");
+      }
+
+      &-six {
+        background: url("../img/blogger-six.svg");
+
+      }
+
+      &-seven {
+        background: url("../img/blogger-seven.svg");
+
+      }
+
+      &-eight {
+        background: url("../img/blogger-eight.svg");
+
+      }
+
+      &:hover .media {
+        display: none;
+      }
+    }
+  }
+
+
+}
+
+.filter {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  @include tablet {
+    display: block;
+  }
+
+  &__title {
+    font-weight: $fontWSemi;
+    font-size: 20px;
+    margin-right: 40px;
+  }
+
+  &-select {
+
+    font-weight: $fontWMedium;
+    font-size: 16px;
+    outline: none;
+    color: $colorWhite;
+    background: none;
+    border: none;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+  }
+}
+
+.media {
+  width: 100%;
+  height: 100%;
+  padding: 182px 12px 20px;
+  background: rgba(189, 28, 159, 0.5);
+
+  &__name {
+    font-weight: $fontWSemi;
+    font-size: 30px;
+  }
+
+  &-soc {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__link {
+      flex: 1 1 50%;
+      display: flex;
+      align-items: center;
+
+      &-youtube {
+        &:before {
+          margin-right: 10px;
+          content: url("../img/link-youtube.svg");
+        }
+      }
+
+      &-vk {
+        &:before {
+          content: url("../img/link-vk.svg");
+          margin-right: 10px;
+
+        }
+      }
+
+      &-instagram {
+        &:before {
+          margin-right: 10px;
+          content: url("../img/link-inst.svg");
+        }
+
+
+      }
+
+    }
+
+  }
+}
+
+.select {
+  cursor: pointer;
+  &-active &-body {
+    display: block;
+  }
+
+  &-active &-header::after {
+    transform: rotate(180deg);
+  }
+
+  position: relative;
+
+  &-header {
+    display: flex;
+    align-items: center;
+
+    &-current {
+      margin-right: 5px;
+    }
+
+    &::after {
+      content: url("../img/arrow.svg");
+      align-items: center;
+
+    }
+  }
+
+  &-body {
+    overflow: auto;
+    position: absolute;
+    padding: 20px;
+    background: $colorDarkPink;
+    background: rgba(110, 16, 94, 0.5);
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    display: none;
+    z-index: 100;
+    &__list {
+      padding: 5px;
+
+      &:not(:last-child) {
+        margin: 10px 0;
+      }
+
+      &:hover {
+        background: $colorOrange;
+        border-radius: 5px;
+      }
+    }
+  }
+}

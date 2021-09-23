@@ -1,0 +1,55 @@
+.swiper {
+  &-button {
+    &-prev, &-next {
+      position: static;
+      transform: translateY(2px);
+      color: #fff;
+    }
+
+    &-prev {
+      &::after {
+        content: url("../img/arrow-vector.svg");
+        align-items: center;
+      }
+    }
+
+    &-next {
+      &::after {
+        content: url("../img/arrow-vector-next.svg");
+      }
+    }
+  }
+
+  &-scrollbar {
+    width: 300px;
+    margin: 5px auto;
+    height: 1px;
+    background: #7e7f80;
+    position: relative;
+
+    &-drag {
+      width: 20px;
+      background: #E5E5E5;
+      height: 3px;
+      position: absolute;
+      top: -1px;
+    }
+  }
+
+  .blogger-item {
+    display: block;
+    @include desktop-small {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.scroll {
+  width: 311px;
+  margin: 5px auto;
+  display: flex;
+  align-items: center;
+}
+
+

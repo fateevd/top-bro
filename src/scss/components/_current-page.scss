@@ -1,0 +1,15 @@
+.current-page {
+  margin-top: 22px;
+  font-size: 14px;
+  font-weight: $fontWLight;
+  &__link {
+    cursor: pointer;
+    &-active {
+      background: $colorGray;
+      padding: 2px 11px;
+      opacity: 0.8;
+      border-radius: 20px;
+      color: $colorDarkPink;
+    }
+  }
+}

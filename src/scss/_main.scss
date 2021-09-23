@@ -1,0 +1,24 @@
+ body {
+  height: 100%;
+}
+
+body {
+  background: $colorDarkPink;
+  color: $colorWhite;
+}
+
+.bnt-reset {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $colorWhite;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: $fontWExtra;
+  font-size: 50px;
+  @include desktop-small {
+    font-size: 38px;
+  }
+}

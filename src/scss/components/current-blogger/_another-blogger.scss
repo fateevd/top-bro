@@ -1,0 +1,8 @@
+.another-blogger {
+  &__title {
+    margin: 80px 0 50px;
+    @include tablet-small {
+      margin: 30px 0;
+    }
+  }
+}

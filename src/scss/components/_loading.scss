@@ -1,0 +1,26 @@
+.loading {
+  width: 100%;
+  font-weight: $fontWLight;
+  font-size: 15px;
+  margin-top: 50px;
+  display: flex;
+
+  &::before, &::after {
+    content: "";
+    transform: translateY(-7px)
+  }
+
+  &-text {
+    padding: 0 67px;
+  }
+
+  &::before {
+    border-bottom: 1px solid $colorWhite;
+    width: 80%;
+  }
+
+  &::after {
+    border-bottom: 1px solid $colorWhite;
+    width: 80%;
+  }
+}

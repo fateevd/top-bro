@@ -1,0 +1,61 @@
+.footer {
+
+
+
+  &-logo {
+    max-width: 201px;
+    max-height: 201px;
+    width: 100%;
+    @include mobil {
+      width: 100px;
+    }
+
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.contacts {
+  flex: 1 1 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include desktop-small {
+
+    display: block;
+  }
+
+  &__list {
+    @include desktop-small {
+      text-align: right;
+      margin: 20px;
+    }
+    &:not(:last-child) {
+      margin-right: 50px;
+      @include desktop-small {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.soc-network {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -50px;
+@include desktop-small {
+  position: static;
+}
+  &__link {
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}

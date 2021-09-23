@@ -1,0 +1,36 @@
+.video {
+  margin-top: 80px;
+
+  &__title {
+
+  }
+
+  &-item {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+    @include tablet-big {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet-small {
+      justify-items: center;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__list {
+      position: relative;
+
+    }
+  }
+}
+
+.bnt-play {
+  background: none;
+  background-image: url("../img/play.svg");
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 45%;
+  top: 40%;
+}

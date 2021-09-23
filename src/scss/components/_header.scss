@@ -1,0 +1,147 @@
+.header {
+  font-weight: $fontWSemi;
+  font-size: 20px;
+  padding: 10px 0;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //@include tablet {
+    //  display: block;
+    //}
+  }
+
+  &-wrapper {
+
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      display: block;
+    }
+
+    &-item {
+      &__list {
+        &:not(:last-child) {
+          margin-right: 30px;
+          @include tablet {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    &-languish {
+      display: none;
+      @include tablet {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  .link {
+    display: block;
+    @include tablet {
+      margin: 25px;
+    }
+
+    &-last {
+      display: none;
+      @include tablet {
+        display: block;
+      }
+    }
+
+
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .active {
+    overflow: hidden;
+
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+
+    width: 30px;
+    height: 20px;
+    z-index: 5;
+    text-align: right;
+  }
+  .header__burger::before, .header__burger::after {
+    content: '';
+    background-color: wheat;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .header__burger.active .burger__button {
+    display: none;
+  }
+  .burger__button {
+    position: absolute;
+    background-color: wheat;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__menu {
+    z-index: 2;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $colorDarkPink;
+    transition: all 0.3s ease 0s;
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .header__menu.active {
+    top: 0;
+  }
+
+
+}
+
+.languish {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+
+
+}
+
+
