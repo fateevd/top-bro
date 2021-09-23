@@ -70,10 +70,10 @@ let blogger = document.querySelectorAll('.blogger-item__list');
 
 blogger.forEach(item => {
     item.addEventListener('click', () => {
-        location.href = "current-blogger.html";
+        location.href = "https://fateevd.github.io/top-bro/current-blogger.html";
     })
 })
-
+//burger menu
 document.querySelector('.header__burger').onclick = () => {
     document.querySelector('.header__burger').classList.toggle('active');
     document.querySelector('.header__menu').classList.toggle('active');
